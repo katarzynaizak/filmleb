@@ -13,4 +13,6 @@ $('#add').on('click', function() {
     `);
 
     $('tbody').append(newEl);
+    $('#exampleModal').modal('hide'); // zamykanie okna modalu
+    $('form').trigger('reset'); // zresetowanie formularza
 })
