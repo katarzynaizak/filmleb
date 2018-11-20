@@ -1,3 +1,5 @@
+let counter = 1;
+
 $('#add').on('click', function() {
     const filmName = $('#filmName').val();
     const filmAuthor = $('#filmAuthor').val();
@@ -5,7 +7,7 @@ $('#add').on('click', function() {
 
     const newEl = $(`
         <tr>
-            <th scope="row"></th>
+            <th scope="row">${counter}</th>
             <td>${filmName}</td>
             <td>${filmAuthor}</td>
             <td>${filmYear}</td>
@@ -15,4 +17,6 @@ $('#add').on('click', function() {
     $('tbody').append(newEl);
     $('#exampleModal').modal('hide'); // zamykanie okna modalu
     $('form').trigger('reset'); // zresetowanie formularza
+
+    counter = counter + 1;
 })
