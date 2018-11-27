@@ -12,6 +12,12 @@ firebase
                 <td>${filmFromDB.name}</td>
                 <td>${filmFromDB.director}</td>
                 <td>${filmFromDB.production}</td>
+                <td>
+                    <i class="fas fa-trash"></i>
+                    <i class="fas fa-pencil-alt"></i>
+                    <i class="fas fa-check"></i>
+                    <i class="fas fa-times-circle"></i>
+                </td>
             </tr>
         `);
 
