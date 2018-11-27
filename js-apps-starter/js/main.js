@@ -46,25 +46,20 @@ for (let film of films) {
     counter = counter + 1;
 }
 
-$('#add').on('click', function() { //submit dla entera
+$('#add').on('click', function() { // wysyłanie danych z formularza
     // pobieranie wartości z modala
     const filmName = $('#filmName').val();
     const filmAuthor = $('#filmAuthor').val();
     const filmYear = $('#filmYear').val();
 
-    // tworzenie wiersza z danymi filmu (dodawanego za pomocą formularza)
-    const addFilm = $(`
-        <tr>
-            <th scope="row">${counter}</th>
-            <td>${filmName}</td>
-            <td>${filmAuthor}</td>
-            <td>${filmYear}</td>
-        </tr>
-    `);
+    const film = {
+        name: filmName,
+        director: filmAuthor,
+        production: filmYear
+    }
 
-    $('tbody').append(addFilm); // wstawianie wiersza z nowym filmem na stronę
+    firebase.database().ref('/films').push(film);
+
     $('#exampleModal').modal('hide'); // zamykanie okna modalu
     $('form').trigger('reset'); // zresetowanie pól formularza
-
-    counter = counter + 1;
 })
