@@ -12,11 +12,10 @@ firebase
                 <td>${filmFromDB.name}</td>
                 <td>${filmFromDB.director}</td>
                 <td>${filmFromDB.production}</td>
-                <td>
-                    <i class="fas fa-trash"></i>
+                <td data-key="${data.key}">
+                    <i class="fas fa-trash" id="delete"></i>
                     <i class="fas fa-pencil-alt"></i>
                     <i class="fas fa-check"></i>
-                    <i class="fas fa-times-circle"></i>
                 </td>
             </tr>
         `);
@@ -38,8 +37,22 @@ $('#add').on('click', function() { // wysyłanie danych z formularza
         production: filmYear
     }
 
-    firebase.database().ref('/films').push(addFilm);
+    firebase.database()
+        .ref('/films')
+        .push(addFilm);
 
     $('#exampleModal').modal('hide'); // zamykanie okna modalu
     $('form').trigger('reset'); // zresetowanie pól formularza
+})
+
+$('body').on('click', '#delete', function() { // "propagacja" dla elementów dynamicznych na stronie (ikonki pojawiają się na stronie dynamicznie, a nie statycznie)
+    const self = $(this);
+    const key = self.parent().data('key');
+    firebase.database()
+        .ref(`/films/${key}`)
+        .remove()
+        .then(function() {
+            //window.location.reload(); // 1 sposób - odświeżam całą stronę
+            self.parent().parent().remove() // 2 sposób - ręcznie usuwam z html'a
+        })
 })
