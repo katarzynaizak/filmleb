@@ -22,13 +22,8 @@
       <div class="col-8">
         <h1>FilmŁeb po mojemu ;)</h1>
         <p>Taka mała, prywatna biblioteczka.</p>
-        <p>Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej. Za wersję wizualną
-          odpowiada Bootstrap 4, a do zarządzania danymi została wykorzystana baza Firebase (na stałe zablokowana do
-          użytku publicznego, tymczasowo blokadę można zdjąć w celu dodania nowych danych). W planie mam dodanie
-          logowania.</p>
-
-        <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#exampleModal">Dodaj
-          film</button>
+        <p>Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej. Za wersję wizualną odpowiada Bootstrap 4, a do zarządzania danymi została wykorzystana baza Firebase (na stałe zablokowana do użytku publicznego, tymczasowo blokadę można zdjąć w celu dodania nowych danych). W planie mam dodanie logowania.</p>
+        <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#exampleModal">Dodaj film</button>
       </div>
       <div class="col-4">
         <img
@@ -70,24 +65,30 @@
         <div class="modal-body">
           <form class="">
             <div class="form-group">
-              <label for="exampleInputEmail1">Nazwa filmu</label>
-              <input type="text" class="form-control" id="filmName" aria-describedby="emailHelp" placeholder="Nazwa filmu" />
+              <label for="filmName">Nazwa filmu</label>
+              <input type="text" class="form-control" id="filmName" placeholder="Nazwa filmu" />
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Autor</label>
+              <label for="filmAuthor">Autor</label>
               <input type="text" class="form-control" id="filmAuthor" placeholder="Autor" />
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Rok</label>
+              <label for="filmYear">Rok</label>
               <input type="text" class="form-control" id="filmYear" placeholder="Rok" />
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Film / Serial</label>
-              <input type="text" class="form-control" id="filmType" placeholder="Film czy serial?" />
+              <label for="filmType">Film / Serial</label>
+              <select class="form-control" id="filmType">
+                <option>film</option>
+                <option>serial</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Animowany / Fabularny</label>
-              <input type="text" class="form-control" id="filmKind" placeholder="Animowany czy fabularny?" />
+              <label for="filmKind">Animowany / Fabularny</label>
+              <select class="form-control" id="filmKind">
+                <option>animowany</option>
+                <option>fabularny</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Nośnik</label>
