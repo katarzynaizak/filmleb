@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>FilmŁeb po mojemu ;)</title>
+  <meta name="description" content="Description" />
+
+  <meta property="og:title" content="FilmŁeb po mojemu ;)" />
+  <meta property="og:description" content="Taka mała, prywatna biblioteczka." />
+  <meta property="og:url" content="https://kasiaizak.github.io/filmleb/" />
+  <meta property="og:image" content="https://kasiaizak.github.io/filmleb/assets/img/cover.png" />
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="row">
+      <div class="col-8">
+        <h1>FilmŁeb po mojemu ;)</h1>
+        <p>Taka mała, prywatna biblioteczka.</p>
+        <p>Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej. Za wersję wizualną odpowiada Bootstrap 4, a do zarządzania danymi została wykorzystana baza Firebase (na stałe zablokowana do użytku publicznego, tymczasowo blokadę można zdjąć w celu dodania nowych danych). W planie mam dodanie logowania.</p>
+        <button type="button" class="btn btn-primary mb-5" data-toggle="modal" data-target="#exampleModal">Dodaj film</button>
+      </div>
+      <div class="col-4">
+        <img src="/assets/img/film-reel.jpg" alt="Taśma filmowa" class="float-right img-fluid" />
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Tytuł filmu</th>
+              <th scope="col">Reżyser / Produkcja</th>
+              <th scope="col">Rok</th>
+              <th scope="col">Typ</th>
+              <th scope="col">Gatunek</th>
+              <th scope="col">Nośnik</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="row mb-3">
+      <div class="col-4 mx-auto">
+        <a href="https://icon-library.net/icon/film-reel-icon-png-25.html">Ikona taśmy filmowej</a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel">Dodanie filmu</h2>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="">
+              <div class="form-group">
+                <label for="filmName">Nazwa filmu</label>
+                <input type="text" class="form-control" id="filmName" placeholder="Nazwa filmu" />
+              </div>
+              <div class="form-group">
+                <label for="filmAuthor">Reżyser / Produkcja</label>
+                <input type="text" class="form-control" id="filmAuthor" placeholder="Autor" />
+              </div>
+              <div class="form-group">
+                <label for="filmYear">Rok</label>
+                <input type="number" class="form-control" id="filmYear" placeholder="Rok" />
+              </div>
+              <div class="form-group">
+                <label for="filmType">Typ</label>
+                <select class="form-control" id="filmType">
+                  <option>film</option>
+                  <option>serial</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="filmKind">Gatunek</label>
+                <select class="form-control" id="filmKind">
+                  <option>animowany</option>
+                  <option>fabularny</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Nośnik</label>
+                <input type="text" class="form-control" id="filmCarrier" placeholder="Na czym przechowywany?" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cofnij</button>
+            <button type="button" id="add" class="btn btn-primary">Dodaj</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDHEix-IX4g3cz1mE7b_6uMe4UV_xaWrRQ",
+      authDomain: "filmleb-po-mojemu.firebaseapp.com",
+      databaseURL: "https://filmleb-po-mojemu.firebaseio.com",
+      projectId: "filmleb-po-mojemu",
+      storageBucket: "filmleb-po-mojemu.appspot.com",
+      messagingSenderId: "762527908496"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="js/main.js"></script>
+  <!-- <script src="js/testy.js"></script> -->
+</body>
+
+</html>
