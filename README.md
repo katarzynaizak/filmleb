@@ -1,11 +1,11 @@
 # FilmŁeb po mojemu ;)
 
-Aplikacja do budowania własnej biblioteczki filmowej, którą stworzyłam podczas kursu *JavaScript Apps Starter* zorganizowanego przez Fundację **Girls Code Fun**. W planie mam dodanie logowania. - [widok on-line](https://kasiaizak.github.io/filmleb/)
+An application to build my own film library, which I created during the *JavaScript Apps Starter* course organized by the **Girls Code Fun Foundation**. I plan to add a login. - [on-line view](https://kasiaizak.github.io/filmleb/)
 
-## Wykorzystane technologie
+## Technologies used
 
-HTML, CSS (za wersję wizualną odpowiada Bootstrap 4) oraz JavaScript (biblioteka jQuery). Do zarządzania danymi została wykorzystana baza Firebase (na stałe zablokowana do użytku publicznego, tymczasowo blokadę można zdjąć w celu dodania nowych danych).
+HTML, CSS (Bootstrap 4 is responsible for the visual version) and JavaScript (jQuery library). To manage the data base was used Firebase (permanently locked to the public, temporarily lock can be removed to add new data).
 
-## Podgląd strony
+## Page preview
 
 ![Screenshot](https://raw.githubusercontent.com/kasiaizak/filmleb/master/github/screenshot.png)
