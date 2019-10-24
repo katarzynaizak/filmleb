@@ -8,4 +8,4 @@ HTML, CSS (Bootstrap 4 is responsible for the visual version) and JavaScript (jQ
 
 ## Page preview
 
-![Screenshot](https://raw.githubusercontent.com/kasiaizak/filmleb/master/github/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/kasiaizak/filmleb/master/src/assets/img/cover.png)
