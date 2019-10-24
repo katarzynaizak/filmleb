@@ -4,9 +4,13 @@
 
 Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej, którą napisałam podczas stacjonarnego kursu *JavaScript Apps Starter* organizowanego przez ** Fundację Girls Code Fun**. - [widok on-line](https://kasiaizak.github.io/filmleb/)
 
+> **EN:** *An application to build my own film library, which I created during the JavaScript Apps Starter course organized by the Girls Code Fun Foundation. - [on-line view](https://kasiaizak.github.io/filmleb/)*
+
 ## Użyte technologie
 
 Za wersję wizualną odpowiada Bootstrap 4, a do zarządzania danymi została wykorzystana baza Firebase (na stałe zablokowana do użytku publicznego, tymczasowo blokadę można zdjąć w celu dodania nowych danych). W planie mam dodanie logowania.
+
+> **EN:** *HTML, CSS (Bootstrap 4 is responsible for the visual version) and JavaScript (jQuery library). To manage the data base was used Firebase (permanently locked to the public, temporarily lock can be removed to add new data). I plan to add a login.*
 
 ## Podgląd strony
 
@@ -33,11 +37,3 @@ Po sklonowaniu repozytorium na swój komputer wchodzimy do głównego katalogu p
 #### Kończenie pracy
 
 Aby przerwać pracę *gulp* wciskamy kombinację klawiszy **CTRL** + **C**.
-
-## English description
-
-An application to build my own film library, which I created during the *JavaScript Apps Starter* course organized by the **Girls Code Fun Foundation**. - [on-line view](https://kasiaizak.github.io/filmleb/)
-
-### Technologies used
-
-HTML, CSS (Bootstrap 4 is responsible for the visual version) and JavaScript (jQuery library). To manage the data base was used Firebase (permanently locked to the public, temporarily lock can be removed to add new data). I plan to add a login.
