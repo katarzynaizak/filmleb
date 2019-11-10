@@ -14,7 +14,7 @@ Za wersję wizualną odpowiada Bootstrap 4, a do zarządzania danymi została wy
 
 ## Podgląd strony
 
-![Screenshot](https://raw.githubusercontent.com/kasiaizak/filmleb/master/github/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/kasiaizak/filmleb/master/github/screenshot.jpg)
 
 ## Uruchomienie strony lokalnie z podglądem zmian na żywo (dla developerów korzystających z Node.js)
 
