@@ -2,9 +2,9 @@
 
 # FilmŁeb po mojemu ;)
 
-Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej, którą napisałam podczas stacjonarnego kursu *JavaScript Apps Starter* organizowanego przez ** Fundację Girls Code Fun**. - [widok on-line](https://kasiaizak.github.io/filmleb/)
+Aplikacja w JS (z użyciem biblioteki jQuery) do budowania własnej biblioteczki filmowej, którą napisałam podczas stacjonarnego kursu *JavaScript Apps Starter* organizowanego przez ** Fundację Girls Code Fun**. - [widok on-line](https://filmleb.kasiaizak.pl/)
 
-> **EN:** *An application to build my own film library, which I created during the JavaScript Apps Starter course organized by the Girls Code Fun Foundation. - [on-line view](https://kasiaizak.github.io/filmleb/)*
+> **EN:** *An application to build my own film library, which I created during the JavaScript Apps Starter course organized by the Girls Code Fun Foundation. - [on-line view](https://filmleb.kasiaizak.pl/)*
 
 ## Użyte technologie
 
